@@ -11,7 +11,7 @@ package com.river.project;
 public class Fish extends Animal{
 	
 	public Fish(boolean isFemale) {
-		super(isFemale, 1);
+		super(isFemale, 0);
 	}
 	
 	public String toString() {
