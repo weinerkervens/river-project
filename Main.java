@@ -3,6 +3,8 @@
  */
 package com.river.project;
 
+import javax.swing.JOptionPane;
+
 /**
  * @author WINNER
  *
@@ -15,18 +17,39 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		River river = new River(10);
+		/*
+		 * ERROR_MESSAGE
+		 * INFORMATION_MESSAGE
+		 * WARNING_MESSAGE
+		 * QUESTION_MESSAGE
+		 * PLAIN_MESSAGE
+		 */
 		
-		System.out.println("INITIAL STATE OF THE RIVER\n\n" + river.toString() + "\n");
-		int increment = 0;
-		int limit = 30;
+		String size = JOptionPane.showInputDialog(null, "Please input the size of the river", "River Size", JOptionPane.QUESTION_MESSAGE);
 		
-		while(increment <= limit) {
-			river.movement();
-			increment++;
-		}
+		System.out.println(size);
 		
-		System.out.println("\n\nFINAL STATE OF THE RIVER\n" + river.toString() + "\n");
+		int sizeInteger = Integer.parseInt(size);
+		
+		River river = new River(sizeInteger);
+		
+		JOptionPane.showMessageDialog(null, river.toString(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, river.movement(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		
+		JOptionPane.showMessageDialog(null, river.toString(), "River State", JOptionPane.INFORMATION_MESSAGE);
+		
+		
+		
+//		System.out.println(msg);
+		
+		
 	}
 
 }
